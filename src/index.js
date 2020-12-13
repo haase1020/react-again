@@ -42,7 +42,7 @@ const Image =() => {
 
 const Author =() => {
   return(
-    <h3>Someone</h3>
+    <h3 style={{color: 'blue', fontSize: '0.75rem'}}>Someone</h3>
   )
 }
 ReactDom.render(<BookList />, document.getElementById('root'))
