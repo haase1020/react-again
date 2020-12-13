@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom'; //inject JS into HTML
-
+import './index.css'
 
 // stateless functional component
 // always have return
@@ -12,22 +12,37 @@ import ReactDom from 'react-dom'; //inject JS into HTML
 
 function BookList() {
 return (
-  <section>
+  <section className="booklist">
     <Book />
-    <Image></Image>
+    <Book />
+    <Book />
+    <Book />
+    <Book />
+    <Book />
   </section>
   );
 }
 
 const Book =() => {
   return (
-    <article>This is a book</article>
+    <div>
+      <article className="book">
+      <Image></Image>
+      <Author />
+      </article>
+    </div>
   )
 }
 
 const Image =() => {
   return (
     <img src="https://m.media-amazon.com/images/I/91O1RKTpiWL._AC_UY218_.jpg" alt="" /> 
+  )
+}
+
+const Author =() => {
+  return(
+    <h3>Someone</h3>
   )
 }
 ReactDom.render(<BookList />, document.getElementById('root'))
